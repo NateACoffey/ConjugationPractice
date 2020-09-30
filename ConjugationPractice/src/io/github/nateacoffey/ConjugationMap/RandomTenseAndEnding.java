@@ -1,10 +1,10 @@
-package io.github.nateacoffey;
+package io.github.nateacoffey.ConjugationMap;
 
-import io.github.nateacoffey.Japanese.JapaneseMapMaker;
+import io.github.nateacoffey.ConjugationMap.Japanese.JapaneseMapMaker;
 
 public class RandomTenseAndEnding {
 	
-	String[] getRandomTenseandEnding() {
+	public String[] getRandomTenseandEnding() {
 		
 		JapaneseMapMaker mapMaker = new JapaneseMapMaker();
 		

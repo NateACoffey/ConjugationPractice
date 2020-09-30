@@ -1,4 +1,4 @@
-package io.github.nateacoffey.Japanese;
+package io.github.nateacoffey.ConjugationMap.Japanese;
 
 import java.util.Map;
 import java.util.HashMap;

@@ -1,8 +1,8 @@
-package io.github.nateacoffey;
+package io.github.nateacoffey.InputOutput;
 
 public class CompareInputToCorrect {
 	
-	boolean equals(String input, String correct) {
+	public boolean equals(String input, String correct) {
 		
 		if(input.equals(correct))
 			return true;
