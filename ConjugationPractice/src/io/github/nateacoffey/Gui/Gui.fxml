@@ -16,7 +16,7 @@
                   <Font size="20.0" />
                </font></TextArea>
             <Button fx:id="helpButton" focusTraversable="false" layoutX="716.0" layoutY="14.0" mnemonicParsing="false" onAction="#showTooltip" text="Help" />
-            <TextField fx:id="inputTextBox" layoutX="270.0" layoutY="379.0" onAction="#onEnter" prefHeight="43.0" prefWidth="262.0" text="test">
+            <TextField fx:id="inputTextBox" layoutX="270.0" layoutY="379.0" onAction="#onEnter" prefHeight="43.0" prefWidth="262.0" text="">
                <font>
                   <Font size="26.0" />
                </font></TextField>
