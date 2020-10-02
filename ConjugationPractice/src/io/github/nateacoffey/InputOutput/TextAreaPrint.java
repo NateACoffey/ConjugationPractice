@@ -18,7 +18,7 @@ public class TextAreaPrint {
 	
 	public void println(String[] tenseAndEnding) {
 		
-		outputTextArea.appendText("＊＊Conjugate " + tenseAndEnding[1] + " into: " + tenseAndEnding[0] + "＊＊\n");
+		outputTextArea.appendText("＊Conjugate -" + tenseAndEnding[1] + " into: " + tenseAndEnding[0] + "＊\n");
 	}
 	
 	public void println(String input, boolean correct) {
