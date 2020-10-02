@@ -22,7 +22,8 @@ public class Spanish extends Language {
 											"present subjunctive first-person singular", "present subjunctive second-person singular", "present subjunctive third-person singular",
 											"present subjunctive first-person plural", "present subjunctive second-person plural", "present subjunctive first-person plural",
 											"past subjunctive first-person singular", "past subjunctive second-person singular", "past subjunctive third-person singular",
-											"past subjunctive first-person plural", "past subjunctive second-person plural", "past subjunctive first-person plural"
+											"past subjunctive first-person plural", "past subjunctive second-person plural", "past subjunctive first-person plural",
+											"present progressive", "past perfect participle"
 											};
 	
 	private final String[] verbEndings = {"ar", "er", "ir"};
@@ -40,44 +41,54 @@ public class Spanish extends Language {
 		final String[] presentSecondPersonSingular = {"as", "es", "es"};
 		final String[] presentThirdPersonSingular = {"a", "e", "e"};
 		final String[] presentFirstPersonPlural = {"amos", "emos", "imos"};
-		final String[] presentSecondPersonPlural = {"ais", "eis", "is"};
+		final String[] presentSecondPersonPlural = {"áis", "éis", "ís"};
 		final String[] presentThirdPersonPlural = {"an", "en", "en"};
-		final String[] pastPreteriteFirstPersonSingular = {"e", "i", "i"};
+		
+		final String[] pastPreteriteFirstPersonSingular = {"é", "í", "í"};
 		final String[] pastPreteriteSecondPersonSingular = {"aste", "iste", "iste"};
-		final String[] pastPreteriteThirdPersonSingular = {"o", "o", "o"};
-		final String[] pastPreteriteFirstPersonPlural = {"amos", "emos", "imos"};
+		final String[] pastPreteriteThirdPersonSingular = {"ó", "ió", "ió"};
+		final String[] pastPreteriteFirstPersonPlural = {"amos", "imos", "imos"};
 		final String[] pastPreteriteSecondPersonPlural = {"asteis", "isteis", "isteis"};
 		final String[] pastPreteriteThirdPersonPlural = {"aron", "ieron", "ieron"};
-		final String[] pastImperfectFirstPersonSingular = {"aba", "ia", "ia"};
-		final String[] pastImperfectSecondPersonSingular = {"abas", "ias", "ias"};
-		final String[] pastImperfectThirdPersonSingular = {"aba", "ia", "ia"};
-		final String[] pastImperfectFirstPersonPlural = {"abamos", "iamos", "iamos"};
-		final String[] pastImperfectSecondPersonPlural = {"abais", "abais", "abais"};
-		final String[] pastImperfectThirdPersonPlural = {"aban", "ian", "ian"};
-		final String[] futureFirstPersonSingular = {"are", "ere", "ire"};
-		final String[] futureSecondPersonSingular = {"aras", "eras", "iras"};
-		final String[] futureThirdPersonSingular = {"ara", "era", "ira"};
+		
+		final String[] pastImperfectFirstPersonSingular = {"aba", "ía", "ía"};
+		final String[] pastImperfectSecondPersonSingular = {"abas", "ías", "ías"};
+		final String[] pastImperfectThirdPersonSingular = {"aba", "ía", "ía"};
+		final String[] pastImperfectFirstPersonPlural = {"ábamos", "íamos", "íamos"};
+		final String[] pastImperfectSecondPersonPlural = {"abais", "íais", "íais"};
+		final String[] pastImperfectThirdPersonPlural = {"aban", "ían", "ían"};
+		
+		final String[] futureFirstPersonSingular = {"aré", "eré", "iré"};
+		final String[] futureSecondPersonSingular = {"arás", "erás", "irás"};
+		final String[] futureThirdPersonSingular = {"ará", "erá", "irá"};
 		final String[] futureFirstPersonPlural = {"aremos", "eremos", "iremos"};
-		final String[] futureSecondPersonPlural = {"arais", "erais", "irais"};
-		final String[] futureThirdPersonPlural = {"aran", "eran", "iran"};
-		final String[] conditionalFirstPersonSingular = {"aria", "eria", "iria"};
-		final String[] conditionalSecondPersonSingular = {"arias", "erias", "irias"};
-		final String[] conditionalThirdPersonSingular = {"aria", "eria", "iria"};
-		final String[] conditionalFirstPersonPlural = {"ariamos", "eriamos", "iriamos"};
-		final String[] conditionalSecondPersonPlural = {"ariais", "eriais", "iriais"};
-		final String[] conditionalThirdPersonPlural = {"arian", "erian", "irian"};
+		final String[] futureSecondPersonPlural = {"aráis", "eráis", "iráis"};
+		final String[] futureThirdPersonPlural = {"arán", "erán", "irán"};
+		
+		final String[] conditionalFirstPersonSingular = {"aría", "ería", "iría"};
+		final String[] conditionalSecondPersonSingular = {"arías", "erías", "irías"};
+		final String[] conditionalThirdPersonSingular = {"aría", "ería", "iría"};
+		final String[] conditionalFirstPersonPlural = {"aríamos", "eríamos", "iríamos"};
+		final String[] conditionalSecondPersonPlural = {"aríais", "eríais", "iríais"};
+		final String[] conditionalThirdPersonPlural = {"arían", "erían", "irían"};
+		
 		final String[] presentSubjunctiveFirstPersonSingular = {"e", "a", "a"};
 		final String[] presentSubjunctiveSecondPersonSingular = {"es", "as", "as"};
 		final String[] presentSubjunctiveThirdPersonSingular = {"e", "a", "a"};
 		final String[] presentSubjunctiveFirstPersonPlural = {"emos", "amos", "amos"};
-		final String[] presentSubjunctiveSecondPersonPlural = {"eis", "ais", "ais"};
+		final String[] presentSubjunctiveSecondPersonPlural = {"éis", "áis", "áis"};
 		final String[] presentSubjunctiveThirdPersonPlural = {"en", "an", "an"};
+		
 		final String[] pastSubjunctiveFirstPersonSingular = {"ara", "iera", "iera"};
 		final String[] pastSubjunctiveSecondPersonSingular = {"aras", "ieras", "ieras"};
 		final String[] pastSubjunctiveThirdPersonSingular = {"ara", "iera", "iera"};
-		final String[] pastSubjunctiveFirstPersonPlural = {"aramos", "ieramos", "ieramos"};
-		final String[] pastSubjunctiveSecondPersonPlural = {"areis", "ierais", "ierais"};
+		final String[] pastSubjunctiveFirstPersonPlural = {"áramos", "iéramos", "iéramos"};
+		final String[] pastSubjunctiveSecondPersonPlural = {"areis", "oerais", "oerais"};
 		final String[] pastSubjunctiveThirdPersonPlural = {"aran", "ieran", "ieran"};
+		
+		final String[] presentPregressive = {"ando", "iendo", "iendo"};
+		final String[] pastPerfectParticiple = {"ado", "ido", "ido"};
+		
 		
 		
 		//collection of the correct conjugations
@@ -97,7 +108,8 @@ public class Spanish extends Language {
 										presentSubjunctiveFirstPersonSingular, presentSubjunctiveSecondPersonSingular, presentSubjunctiveThirdPersonSingular,
 										presentSubjunctiveFirstPersonPlural, presentSubjunctiveSecondPersonPlural, presentSubjunctiveThirdPersonPlural,
 										pastSubjunctiveFirstPersonSingular, pastSubjunctiveSecondPersonSingular, pastSubjunctiveThirdPersonSingular,
-										pastSubjunctiveFirstPersonPlural, pastSubjunctiveSecondPersonPlural, pastSubjunctiveThirdPersonPlural
+										pastSubjunctiveFirstPersonPlural, pastSubjunctiveSecondPersonPlural, pastSubjunctiveThirdPersonPlural,
+										presentPregressive, pastPerfectParticiple
 										};
 		
 		
