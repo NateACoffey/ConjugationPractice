@@ -1,11 +1,16 @@
 package io.github.nateacoffey.Gui;
 
 
+import java.io.IOException;
+
 import io.github.nateacoffey.ConjugationPractice;
 import io.github.nateacoffey.InputOutput.TextAreaPrint;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
+import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -56,6 +61,33 @@ public class GuiController {
 		window.setScene(scene);
 		
 		return window;
+		
+	}
+	
+	private void destroy() {
+		conjugationPractice = null;
+	}
+	
+	@FXML private void returnToLanguageSelect(ActionEvent event){
+		
+		try {
+			FXMLLoader loader = new FXMLLoader();
+			loader.setLocation(getClass().getResource("/io/github/nateacoffey/LanguageSelector/LanguageSelector.fxml"));
+			Parent root = loader.load();
+			
+			Scene languageSelectScene = new Scene(root);
+			
+			Node node = (Node) event.getSource();
+			Stage stage = (Stage) node.getScene().getWindow();
+			
+			destroy();
+			
+			stage.setScene(languageSelectScene);
+			stage.show();
+			
+		} catch (IOException ioe) {
+			ioe.printStackTrace();
+		}
 		
 	}
 	
