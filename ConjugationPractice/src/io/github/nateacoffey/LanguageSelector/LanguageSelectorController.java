@@ -54,7 +54,7 @@ public class LanguageSelectorController {
 	
 	public void initialize() {
 		
-        String[] availableLanguage = {"SPANISH", "JAPANESE"};
+        String[] availableLanguage = {"JAPANESE", "SPANISH"};
         
         ObservableList<String> list = FXCollections.observableArrayList();
         list.addAll(availableLanguage);
