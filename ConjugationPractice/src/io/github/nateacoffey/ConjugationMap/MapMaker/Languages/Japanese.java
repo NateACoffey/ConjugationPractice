@@ -1,9 +1,12 @@
-package io.github.nateacoffey.ConjugationMap.Japanese;
+package io.github.nateacoffey.ConjugationMap.MapMaker.Languages;
 
 import java.util.Map;
+
+import io.github.nateacoffey.ConjugationMap.MapMaker.Language;
+
 import java.util.HashMap;
 
-public class JapaneseMapMaker {
+public class Japanese extends Language {
 	private Map<String, Map<String, String>> verbTenseMap;
 	
 	private final String[] verbTenses =	{	"present polite", "present negative plain", "present negative polite",
@@ -16,6 +19,12 @@ public class JapaneseMapMaker {
 	
 	private final String[] verbEndings = {"う", "く", "ぐ", "す", "つ", "ぬ", "ぶ", "む", "る", "いる", "える"};
 	
+	public Japanese() {
+		super.verbTenses = this.verbTenses;
+		super.verbEndings = this.verbEndings;
+	}
+	
+	@Override
 	public Map<String, Map<String, String>> fillMap(){
 		
 		//correct conjugations
@@ -60,27 +69,6 @@ public class JapaneseMapMaker {
 		}
 		
 		return verbTenseMap;
-	}
-	
-	//Builds inner map of conjugations
-	private Map<String, String> buildConjugationMap(String[] conjugation){
-		
-		Map<String, String> verbEndingConjugations = new HashMap<String, String>();
-		
-		for(int i = 0; i < verbEndings.length; ++i){
-			verbEndingConjugations.put(verbEndings[i], conjugation[i]);
-			}
-		
-		return verbEndingConjugations;
-	}
-	
-	
-	public String[] getVerbEndings() {
-		return verbEndings;
-	}
-	
-	public String[] getVerbTenses() {
-		return verbTenses;
 	}
 	
 }

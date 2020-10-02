@@ -24,7 +24,7 @@ public class GuiController {
 	@FXML private TextField inputTextBox;
 	
 	private ConjugationPractice conjugationPractice;
-	
+	private String language;
 	
 	private Stage helpDialog() {
 		
@@ -76,16 +76,21 @@ public class GuiController {
 		
 	}
 	
-	public void initialize() {
+	public void assignLanguage(String language) {
+		this.language = language;
+		
+		fakeInitialize();
+	}
+	
+	public void fakeInitialize() {
 		conjugationPractice = new ConjugationPractice();
 		
 		//send TextArea for printing
 		TextAreaPrint consolePrint = new TextAreaPrint();
 		consolePrint.setOutputTextArea(outputTextArea);
 		
-		
 		//setup ConjugationMap
-		conjugationPractice.setup();
+		conjugationPractice.setup(language);
 	}
 }
 

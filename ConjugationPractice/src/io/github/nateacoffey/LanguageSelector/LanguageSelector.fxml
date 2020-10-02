@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.github.nateacoffey.LanguageSelector.LanguageSelectorController">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+         <children>
+            <Button onAction="#SwitchScenes" layoutX="473.0" layoutY="198.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="122.0" text="OK" />
+            <ChoiceBox fx:id="choiceBox" layoutX="206.0" layoutY="198.0" prefHeight="54.0" prefWidth="243.0" >
+            	
+            </ChoiceBox>
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>

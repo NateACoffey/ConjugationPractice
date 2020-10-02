@@ -1,12 +1,34 @@
 package io.github.nateacoffey.ConjugationMap;
 
-import io.github.nateacoffey.ConjugationMap.Japanese.JapaneseMapMaker;
+import io.github.nateacoffey.ConjugationMap.MapMaker.Language;
+import io.github.nateacoffey.ConjugationMap.MapMaker.Languages.Japanese;
+import io.github.nateacoffey.ConjugationMap.MapMaker.Languages.Spanish;
 
 public class RandomTenseAndEnding {
 	
-	public String[] getRandomTenseandEnding() {
+	private Language mapMaker;
+	
+	public void setLanguage(String language) {
+		switch(language) {
+			case "JAPANESE":
+				mapMaker = new Japanese();
+				break;
+			case "SPANISH":
+				mapMaker = new Japanese();
+				break;
+		}
+	}
+	
+	public String[] getRandomTenseandEnding(String language) {
 		
-		JapaneseMapMaker mapMaker = new JapaneseMapMaker();
+		switch(language) {
+			case "SPANISH":
+				mapMaker = new Spanish();
+				break;
+			case "JAPANESE":
+				mapMaker = new Japanese();
+				break;
+		}
 		
 		String[] listOfTenses = mapMaker.getVerbTenses();
 		String[] listOfEndings = mapMaker.getVerbEndings();

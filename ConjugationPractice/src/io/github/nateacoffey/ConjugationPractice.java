@@ -4,7 +4,9 @@ package io.github.nateacoffey;
 import java.util.Map;
 
 import io.github.nateacoffey.ConjugationMap.RandomTenseAndEnding;
-import io.github.nateacoffey.ConjugationMap.Japanese.JapaneseMapMaker;
+import io.github.nateacoffey.ConjugationMap.MapMaker.Language;
+import io.github.nateacoffey.ConjugationMap.MapMaker.Languages.Japanese;
+import io.github.nateacoffey.ConjugationMap.MapMaker.Languages.Spanish;
 import io.github.nateacoffey.InputOutput.CompareInputToCorrect;
 import io.github.nateacoffey.InputOutput.TextAreaPrint;
 import javafx.application.Platform;
@@ -17,14 +19,29 @@ public class ConjugationPractice {
 	private String[] tenseAndEnding;
 	private CompareInputToCorrect compareInputToCorrect = new CompareInputToCorrect();
 	private TextAreaPrint consolePrint = new TextAreaPrint();
+	private Language mapMaker;
 	
 	private int attempts = 0;
 	private String answer;
+	private String language;
 	
-	
-	public void setup() {
+	public void setup(String language) {
 		
-		JapaneseMapMaker mapMaker = new JapaneseMapMaker();
+		this.language = language;
+		
+		if(mapMaker != null) {
+			mapMaker = null;
+		}
+		
+		switch(this.language) {
+			case "SPANISH":
+				mapMaker = new Spanish();
+				break;
+			case "JAPANESE":
+				mapMaker = new Japanese();
+				break;
+		}
+		
 		conjugatedTenses = mapMaker.fillMap(); 
 		
 		setAndPrintNewRandomTenseAndEnding();
@@ -33,7 +50,8 @@ public class ConjugationPractice {
 	
 	private void setAndPrintNewRandomTenseAndEnding() {
 		
-		tenseAndEnding = randomTenseAndEnding.getRandomTenseandEnding();
+		tenseAndEnding = randomTenseAndEnding.getRandomTenseandEnding(language);
+		
 		answer = conjugatedTenses.get(tenseAndEnding[0]).get(tenseAndEnding[1]);
 		
 		consolePrint.println(tenseAndEnding);
