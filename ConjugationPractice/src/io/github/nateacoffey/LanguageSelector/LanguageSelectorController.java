@@ -36,6 +36,7 @@ public class LanguageSelectorController {
 				//Sends data to the controller before showing
 				GuiController guiController = loader.getController();
 				guiController.assignLanguage(language);
+				guiController.setHelp();
 				
 				Node node = (Node) event.getSource();
 				Stage stage = (Stage) node.getScene().getWindow();
