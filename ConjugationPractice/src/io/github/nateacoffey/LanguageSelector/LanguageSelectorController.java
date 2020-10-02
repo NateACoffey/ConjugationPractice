@@ -20,7 +20,8 @@ public class LanguageSelectorController {
 	@FXML private ChoiceBox<String> choiceBox;
 	@FXML private AnchorPane content;
 	
-	public void SwitchScenes(ActionEvent event) {
+	
+	@FXML private void SwitchScenes(ActionEvent event) {
 		
 		if(choiceBox.getValue() != null) {
 			
