@@ -6,6 +6,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 
@@ -17,6 +18,7 @@ public class Main extends Application {
 			
 			Parent root = FXMLLoader.load(getClass().getResource("LanguageSelector/LanguageSelector.fxml"));
 			Scene scene = new Scene(root, 800, 450);
+			primaryStage.getIcons().add(new Image("file:src/io/github/nateacoffey/favicon.png"));
 			primaryStage.setTitle("Conjugation Practice");
 			primaryStage.setScene(scene);
 			primaryStage.show();
