@@ -1,7 +1,7 @@
 # ConjugationPractice
 
 
-Conjugation practice that I made to practice my Japanese conjugations
+Conjugation practice is a desktop application that I made to practice my Japanese conjugations
 
 I made this because I couldn't find good conjugation quizes and realized that I can just make my own. Turns out doing QA is harder than the coding since I need to know the appropriate conjugations.
 
